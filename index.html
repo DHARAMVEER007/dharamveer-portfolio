@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharamveer Singh | Software Engineer (Java, Spring Boot, Full-Stack)</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Portfolio of Dharamveer Singh - Software Engineer at Virima specializing in Java backend development, Spring Boot, Spring Security, RESTful APIs, and Full-Stack Engineering." />
+  <meta name="keywords" content="Dharamveer Singh, Software Engineer, Java Developer, Spring Boot, Spring Security, Full Stack, Virima, Bengaluru, Portfolio" />
+  <meta name="author" content="Dharamveer Singh" />
+
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" content="Dharamveer Singh | Software Engineer" />
+  <meta property="og:description" content="Software Engineer at Virima specializing in Java, Spring Boot, Microservices & Full-Stack Development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.linkedin.com/in/dharamveersinghhere/" />
+  <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4D03AQF-gAioYN_0aw/profile-displayphoto-scale_100_100/B4DZ_mIqIIHQAY-/0/1786272458391?e=1790812800&v=beta&t=1_GyCWL4OXdYIp_rUrWRxXKA2mhZ8o5KGSIN5yd78Qg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            },
+            accent: {
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+            },
+            dark: {
+              bg: '#090d16',
+              surface: '#0f172a',
+              card: '#151f32',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#090d16] text-slate-200 antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300">
+
+  <!-- Background Ambient Glows -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -right-40 w-[30rem] h-[30rem] bg-cyan-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+    <div class="grid-pattern absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"></div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-indigo-500/30 text-white shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+      <i class="fa-solid fa-check text-sm"></i>
+    </div>
+    <div>
+      <h5 id="toast-title" class="text-sm font-semibold">Copied!</h5>
+      <p id="toast-msg" class="text-xs text-slate-400">Content copied to clipboard</p>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#090d16]/80 dark:bg-[#090d16]/80 border-b border-white/5 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white font-display font-bold text-lg shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform duration-300">
+          DS
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+            Dharamveer Singh
+          </span>
+          <span class="text-xs font-mono text-indigo-400 tracking-wider">Software Engineer · Virima</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-white/5 dark:bg-white/5 p-1.5 rounded-full border border-white/10 backdrop-blur-md">
+        <a href="#about" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">About</a>
+        <a href="#experience" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Experience</a>
+        <a href="#projects" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Projects</a>
+        <a href="#skills" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Skills</a>
+        <a href="#certifications" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Certifications</a>
+        <a href="#education" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Education</a>
+      </nav>
+
+      <!-- Right Actions (Theme & CTA) -->
+      <div class="hidden md:flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all duration-300">
+          <i class="fa-regular fa-sun text-base hidden dark:block"></i>
+          <i class="fa-regular fa-moon text-base block dark:hidden"></i>
+        </button>
+
+        <!-- Let's Connect CTA -->
+        <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-medium text-sm shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" aria-label="Toggle Theme" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-slate-300 flex items-center justify-center">
+          <i class="fa-regular fa-sun text-base hidden dark:block"></i>
+          <i class="fa-regular fa-moon text-base block dark:hidden"></i>
+        </button>
+        <button id="mobile-menu-btn" aria-label="Toggle Menu" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-slate-300 flex items-center justify-center">
+          <i class="fa-solid fa-bars text-lg" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-[#090d16]/95 border-b border-white/10 backdrop-blur-2xl">
+      <div class="flex flex-col space-y-2">
+        <a href="#about" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium">About</a>
+        <a href="#experience" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium">Experience</a>
+        <a href="#projects" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium">Projects</a>
+        <a href="#skills" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium">Skills</a>
+        <a href="#certifications" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium">Certifications</a>
+        <a href="#education" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium">Education</a>
+        <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-medium text-center shadow-lg shadow-indigo-600/30">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-7 flex flex-col items-start text-left">
+            
+            <!-- Open to Work Badge -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase mb-6 animate-pulse">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Open to Opportunities · Bengaluru / Hybrid
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.1] mb-6">
+              Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">Scalable Java Backend</span> & Distributed Systems
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mb-8">
+              Hi, I'm <strong class="text-white font-semibold">Dharamveer Singh</strong> (He/Him). I build high-concurrency backend architectures, RESTful APIs, and full-stack solutions using <span class="text-indigo-300">Java</span>, <span class="text-indigo-300">Spring Boot</span>, <span class="text-indigo-300">Spring Security</span>, and <span class="text-indigo-300">MySQL</span> at <span class="text-white font-semibold">Virima</span>.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+              <a href="#experience" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-medium text-sm shadow-xl shadow-indigo-600/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>View Experience</span>
+              </a>
+              <a href="#projects" class="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-sm hover:border-white/20 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-code"></i>
+                <span>Explore Projects</span>
+              </a>
+              <a href="https://www.linkedin.com/in/dharamveersinghhere/" target="_blank" rel="noopener noreferrer" class="px-4 py-3.5 rounded-xl bg-[#0077B5]/15 hover:bg-[#0077B5]/25 border border-[#0077B5]/30 text-[#0077B5] hover:text-white font-medium text-sm transition-all flex items-center gap-2">
+                <i class="fa-brands fa-linkedin text-base"></i>
+                <span class="hidden sm:inline">LinkedIn Profile</span>
+              </a>
+            </div>
+
+            <!-- Quick Stat Counters -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full pt-6 border-t border-white/10">
+              <div class="flex flex-col">
+                <span class="font-display text-2xl sm:text-3xl font-bold text-white count-up" data-target="1.8">1.8+</span>
+                <span class="text-xs text-slate-400 font-mono mt-0.5">Years at Virima</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display text-2xl sm:text-3xl font-bold text-indigo-400 count-up" data-target="32">32+</span>
+                <span class="text-xs text-slate-400 font-mono mt-0.5">Technical Skills</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display text-2xl sm:text-3xl font-bold text-cyan-400 count-up" data-target="6">6</span>
+                <span class="text-xs text-slate-400 font-mono mt-0.5">Certifications</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display text-2xl sm:text-3xl font-bold text-emerald-400">8.16</span>
+                <span class="text-xs text-slate-400 font-mono mt-0.5">B.Tech CGPA</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Card / Visual Showcase -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              
+              <!-- Glow Behind Card -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+
+              <!-- Main Glass Card -->
+              <div class="relative rounded-3xl bg-[#0f172a]/90 backdrop-blur-xl border border-white/10 p-6 sm:p-8 shadow-2xl overflow-hidden">
+                
+                <!-- Card Header with Photo -->
+                <div class="flex items-start gap-4 mb-6">
+                  <div class="relative">
+                    <img 
+                      src="https://media.licdn.com/dms/image/v2/D4D03AQF-gAioYN_0aw/profile-displayphoto-scale_100_100/B4DZ_mIqIIHQAY-/0/1786272458391?e=1790812800&v=beta&t=1_GyCWL4OXdYIp_rUrWRxXKA2mhZ8o5KGSIN5yd78Qg" 
+                      alt="Dharamveer Singh"
+                      onerror="this.src='https://ui-avatars.com/api/?name=Dharamveer+Singh&background=6366f1&color=fff&size=200'"
+                      class="w-20 h-20 rounded-2xl object-cover ring-2 ring-indigo-500/50 shadow-xl" 
+                    />
+                    <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-[#0f172a] flex items-center justify-center">
+                      <span class="w-2 h-2 rounded-full bg-white"></span>
+                    </span>
+                  </div>
+
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <h3 class="font-display font-bold text-xl text-white">Dharamveer Singh</h3>
+                      <span class="text-xs px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-mono">He/Him</span>
+                    </div>
+                    <p class="text-sm font-medium text-indigo-400 mt-0.5">Software Engineer</p>
+                    <p class="text-xs text-slate-400 flex items-center gap-1.5 mt-1">
+                      <i class="fa-solid fa-location-dot text-slate-500"></i>
+                      Bengaluru, Karnataka, India
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bio Snippet -->
+                <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5 text-xs leading-relaxed text-slate-300 mb-6 font-mono">
+                  <span class="text-indigo-400">$</span> specializing in enterprise backend architecture, Java Servlets/JSP, Spring MVC, REST APIs, and relational database systems.
+                </div>
+
+                <!-- Key Tech Pills -->
+                <div class="space-y-3 mb-6">
+                  <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider font-mono">Core Arsenal</div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="tech-badge"><i class="fa-brands fa-java text-amber-500"></i> Java</span>
+                    <span class="tech-badge"><i class="fa-solid fa-leaf text-emerald-400"></i> Spring Boot</span>
+                    <span class="tech-badge"><i class="fa-solid fa-shield-halved text-blue-400"></i> Spring Security</span>
+                    <span class="tech-badge"><i class="fa-solid fa-database text-cyan-400"></i> MySQL & SQL</span>
+                    <span class="tech-badge"><i class="fa-brands fa-react text-sky-400"></i> React.js</span>
+                    <span class="tech-badge"><i class="fa-brands fa-git-alt text-orange-500"></i> Git</span>
+                  </div>
+                </div>
+
+                <!-- Contact Fast Actions -->
+                <div class="grid grid-cols-2 gap-2.5 pt-4 border-t border-white/10">
+                  <button 
+                    onclick="copyToClipboard('dharamveersingh1715@gmail.com', 'Email Address')"
+                    class="px-3 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-slate-300 hover:text-white flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-regular fa-copy text-indigo-400"></i>
+                    <span>Copy Email</span>
+                  </button>
+                  <button 
+                    onclick="copyToClipboard('+919001177119', 'Phone Number')"
+                    class="px-3 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-slate-300 hover:text-white flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                    <span>Copy Phone</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-slate-900/40 relative border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+            About Me
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+            Architecting Resilient Backend & Full-Stack Solutions
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            Passionate about backend performance, clean system design, and building scalable enterprise software.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Narrative -->
+          <div class="lg:col-span-7 space-y-4 text-slate-300 text-base leading-relaxed">
+            <p>
+              As a <strong class="text-white">Software Engineer at Virima</strong> in Bengaluru, I specialize in Java backend development, leveraging my expertise in <span class="text-indigo-400 font-medium">Java</span>, <span class="text-indigo-400 font-medium">Spring Framework (Spring Boot, Spring MVC)</span>, and <span class="text-indigo-400 font-medium">RESTful APIs</span> to build scalable and reliable software solutions.
+            </p>
+            <p>
+              My focus centers on designing efficient backend architectures, implementing rock-solid business logic, ensuring secure enterprise authentication, and facilitating seamless integration between frontend systems and database layers.
+            </p>
+            <p>
+              I hold a <strong class="text-white">Bachelor of Technology in Computer Science & Engineering</strong> from the <span class="text-indigo-300">University Institute of Technology, RGPV</span> (graduating with an <strong class="text-emerald-400">8.16 CGPA</strong>). I am committed to continuous engineering growth, write clean maintainable code, and thrive in collaborative cross-functional teams that solve complex real-world engineering challenges.
+            </p>
+
+            <div class="pt-4 flex flex-wrap gap-4 text-sm font-medium">
+              <div class="flex items-center gap-2 text-slate-300">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Microservices & REST APIs</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-300">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Spring Security & Auth Workflows</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-300">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Relational Databases & SQL Optimization</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-300">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Full-Stack Integration (React, JS)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards / Highlights -->
+          <div class="lg:col-span-5 grid grid-cols-1 gap-4">
+            
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-[#151f32] to-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-2">Backend Architecture</h4>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Design and deployment of high-throughput Java enterprise services, Spring Boot applications, and modular MVC architecture.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-[#151f32] to-[#0f172a] border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-2">Data & Storage Pipelines</h4>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Expertise in MySQL schema design, query optimization, JDBC connectivity, and data structure algorithms for low latency operations.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-[#151f32] to-[#0f172a] border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-2">Full-Stack Capability</h4>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                End-to-end fluency connecting interactive React.js and modern JavaScript user interfaces with robust backend APIs.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="py-24 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+            Career Journey
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+            Work Experience & Contributions
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            Hands-on engineering across enterprise environments, traineeships, and full-stack apprenticeships.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline -->
+        <div class="relative border-l-2 border-indigo-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+
+          <!-- Role 1: Software Engineer @ Virima -->
+          <div class="relative group">
+            <!-- Timeline Node Indicator -->
+            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-[#090d16] border-4 border-indigo-500 group-hover:scale-125 transition-transform duration-300 flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            </div>
+
+            <div class="p-6 sm:p-8 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 shadow-xl">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Software Engineer</h3>
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="text-indigo-400 font-semibold text-base">Virima</span>
+                    <span class="text-slate-500">•</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">Bengaluru, Karnataka, India (On-site)</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-medium">
+                    Jun 2025 – Present
+                  </span>
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold">
+                    Current
+                  </span>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Spearheading Java backend development and enterprise microservices. Focus on architecting performant REST APIs, implementing complex business workflows, integrating with MySQL datastores, and collaborating with cross-functional engineering teams to ensure optimal reliability and scalability.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-chip">Java</span>
+                <span class="tech-chip">Spring Boot</span>
+                <span class="tech-chip">Spring MVC</span>
+                <span class="tech-chip">Spring Security</span>
+                <span class="tech-chip">RESTful APIs</span>
+                <span class="tech-chip">Microservices</span>
+                <span class="tech-chip">SQL</span>
+                <span class="tech-chip">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2: Software Engineering Trainee @ Virima -->
+          <div class="relative group">
+            <!-- Timeline Node Indicator -->
+            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-[#090d16] border-4 border-cyan-500 group-hover:scale-125 transition-transform duration-300"></div>
+
+            <div class="p-6 sm:p-8 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-cyan-500/40 transition-all duration-300 shadow-xl">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-white">Software Engineering Trainee</h3>
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="text-cyan-400 font-semibold text-base">Virima</span>
+                    <span class="text-slate-500">•</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">Bengaluru, Karnataka, India</span>
+                  </div>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-mono font-medium">
+                  Feb 2025 – Jun 2025 · 5 mos
+                </span>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Underwent intensive practical training in enterprise software engineering standards. Worked on backend modules using Java, Spring Framework, Spring Security, and database interactions while contributing to frontend integration using React.js and JavaScript.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-chip">Java Development</span>
+                <span class="tech-chip">Spring Boot</span>
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">Spring Security</span>
+                <span class="tech-chip">Core Java</span>
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip">Full-Stack Development</span>
+                <span class="tech-chip">Data Structures</span>
+                <span class="tech-chip">SDLC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3: Full-Stack Developer Apprentice @ TAP Academy -->
+          <div class="relative group">
+            <!-- Timeline Node Indicator -->
+            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-[#090d16] border-4 border-purple-500 group-hover:scale-125 transition-transform duration-300"></div>
+
+            <div class="p-6 sm:p-8 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-purple-500/40 transition-all duration-300 shadow-xl">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-white">Full-Stack Developer Apprentice</h3>
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="text-purple-400 font-semibold text-base">TAP Academy</span>
+                    <span class="text-slate-500">•</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">Bengaluru, Karnataka, India</span>
+                  </div>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-mono font-medium">
+                  Jul 2024 – Feb 2025 · 8 mos
+                </span>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Completed rigorous end-to-end full-stack training and project development. Built Java-based web applications, mastered MVC architecture with Servlets and JSP, engineered relational database schemas in MySQL, and demonstrated peer team leadership.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-chip">Full-Stack Development</span>
+                <span class="tech-chip">Java Stack</span>
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">JDBC</span>
+                <span class="tech-chip">HTML/CSS/JS</span>
+                <span class="tech-chip">Team Leadership</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-24 bg-slate-900/40 border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+            Engineering Portfolio
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+            Featured Projects & Systems
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            Real-world applications built with robust architectural patterns, security standards, and database efficiency.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Flagship Project: QuickBites (Lg Col 8) -->
+          <div class="lg:col-span-8 rounded-3xl bg-gradient-to-b from-[#151f32] to-[#0f172a] border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+              <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-mono font-semibold uppercase tracking-wider">
+                Flagship Project
+              </span>
+              <span class="text-xs font-mono text-slate-400">MVC Architecture • Java Enterprise</span>
+            </div>
+
+            <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
+              QuickBites — Seamless Food Delivery Web Application
+            </h3>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              A comprehensive web application designed to facilitate seamless food ordering and delivery. Engineered with a clean Model-View-Controller (MVC) architecture separating presentation, core business logic, and MySQL database persistence.
+            </p>
+
+            <!-- Project Highlights Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="p-4 rounded-xl bg-slate-900/70 border border-white/5">
+                <div class="flex items-center gap-2.5 text-indigo-400 font-semibold text-sm mb-1.5">
+                  <i class="fa-solid fa-user-lock"></i>
+                  <span>Authentication & Roles</span>
+                </div>
+                <p class="text-xs text-slate-400">Secure registration and role-based access for customers, restaurants, and delivery executives.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/70 border border-white/5">
+                <div class="flex items-center gap-2.5 text-cyan-400 font-semibold text-sm mb-1.5">
+                  <i class="fa-solid fa-utensils"></i>
+                  <span>Dynamic Menu Engine</span>
+                </div>
+                <p class="text-xs text-slate-400">Real-time menu item additions, inventory updates, dynamic pricing, and dish media handling.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/70 border border-white/5">
+                <div class="flex items-center gap-2.5 text-emerald-400 font-semibold text-sm mb-1.5">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Checkout & Orders</span>
+                </div>
+                <p class="text-xs text-slate-400">Seamless cart management, order placement transactions, and order history tracking.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/70 border border-white/5">
+                <div class="flex items-center gap-2.5 text-purple-400 font-semibold text-sm mb-1.5">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <span>Real-Time Tracking</span>
+                </div>
+                <p class="text-xs text-slate-400">Live order status progression from kitchen preparation to courier dispatch and doorstep arrival.</p>
+              </div>
+            </div>
+
+            <!-- Tech Stack Badges -->
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="tech-chip">Java Servlets</span>
+              <span class="tech-chip">JSP</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">JDBC</span>
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">MVC Pattern</span>
+            </div>
+
+            <!-- Project Action -->
+            <div class="flex items-center gap-4">
+              <button 
+                onclick="openProjectModal('quickbites')"
+                class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm shadow-lg shadow-indigo-600/30 flex items-center gap-2 transition-all">
+                <span>View Full Architecture Specs</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2 & 3 in Col 4 -->
+          <div class="lg:col-span-4 flex flex-col gap-6">
+            
+            <!-- Project 2: Enterprise API & Auth -->
+            <div class="p-6 rounded-3xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all shadow-xl flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono text-indigo-400 font-semibold uppercase">Microservices</span>
+                  <i class="fa-solid fa-shield-halved text-indigo-400"></i>
+                </div>
+                <h4 class="font-display font-bold text-lg text-white mb-2">
+                  Enterprise Auth & Microservices Suite
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">
+                  Scalable backend architecture utilizing Spring Boot and Spring Security with JWT tokens, role-based access control (RBAC), and centralized API gateway routing.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tech-chip text-[11px]">Spring Boot</span>
+                  <span class="tech-chip text-[11px]">Spring Security</span>
+                  <span class="tech-chip text-[11px]">JWT</span>
+                  <span class="tech-chip text-[11px]">REST API</span>
+                </div>
+              </div>
+              <button 
+                onclick="openProjectModal('auth-suite')"
+                class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 transition-colors">
+                <span>View System Details</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+
+            <!-- Project 3: High-Performance Database Persistence -->
+            <div class="p-6 rounded-3xl bg-[#0f172a] border border-white/10 hover:border-cyan-500/30 transition-all shadow-xl flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono text-cyan-400 font-semibold uppercase">Data Pipeline</span>
+                  <i class="fa-solid fa-bolt text-cyan-400"></i>
+                </div>
+                <h4 class="font-display font-bold text-lg text-white mb-2">
+                  Optimized JDBC & SQL Persistence Engine
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">
+                  High-efficiency relational database layer with HikariCP connection pooling, parameterized query execution to safeguard against SQL injections, and index optimization.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tech-chip text-[11px]">MySQL</span>
+                  <span class="tech-chip text-[11px]">JDBC</span>
+                  <span class="tech-chip text-[11px]">HikariCP</span>
+                  <span class="tech-chip text-[11px]">Indexing</span>
+                </div>
+              </div>
+              <button 
+                onclick="openProjectModal('db-engine')"
+                class="text-xs font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 transition-colors">
+                <span>View System Details</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS MATRIX (32 SKILLS) -->
+    <section id="skills" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+            Technical Competence
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+            Comprehensive Skills Matrix
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            All 32 technical, architectural, and professional proficiencies demonstrated across professional projects.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="skill-filters">
+          <button class="skill-filter-btn active" data-filter="all">All Skills (32)</button>
+          <button class="skill-filter-btn" data-filter="backend">Backend & Java</button>
+          <button class="skill-filter-btn" data-filter="frameworks">Frameworks & Security</button>
+          <button class="skill-filter-btn" data-filter="frontend">Frontend & Web</button>
+          <button class="skill-filter-btn" data-filter="database">Database & Storage</button>
+          <button class="skill-filter-btn" data-filter="engineering">CS & Best Practices</button>
+          <button class="skill-filter-btn" data-filter="interpersonal">Leadership & Soft Skills</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4" id="skills-grid">
+          
+          <!-- Backend & Java -->
+          <div class="skill-card" data-category="backend">
+            <i class="fa-brands fa-java text-2xl text-amber-500 mb-2"></i>
+            <span class="skill-name">Java</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-code text-2xl text-orange-400 mb-2"></i>
+            <span class="skill-name">Core Java</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-laptop-code text-2xl text-yellow-400 mb-2"></i>
+            <span class="skill-name">Java Development</span>
+            <span class="skill-level">Core Specialization</span>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-c text-2xl text-blue-400 mb-2"></i>
+            <span class="skill-name">C (Language)</span>
+            <span class="skill-level">LinkedIn Assessment</span>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-server text-2xl text-indigo-400 mb-2"></i>
+            <span class="skill-name">Java Servlets</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-file-code text-2xl text-purple-400 mb-2"></i>
+            <span class="skill-name">JSP</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-link text-2xl text-cyan-400 mb-2"></i>
+            <span class="skill-name">JDBC</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <!-- Frameworks & Security -->
+          <div class="skill-card" data-category="frameworks">
+            <i class="fa-solid fa-leaf text-2xl text-emerald-400 mb-2"></i>
+            <span class="skill-name">Spring Boot</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="frameworks">
+            <i class="fa-solid fa-cubes text-2xl text-emerald-500 mb-2"></i>
+            <span class="skill-name">Spring Framework</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="frameworks">
+            <i class="fa-solid fa-network-wired text-2xl text-teal-400 mb-2"></i>
+            <span class="skill-name">Spring MVC</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="frameworks">
+            <i class="fa-solid fa-shield-halved text-2xl text-indigo-400 mb-2"></i>
+            <span class="skill-name">Spring Security</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="frameworks">
+            <i class="fa-solid fa-sitemap text-2xl text-sky-400 mb-2"></i>
+            <span class="skill-name">Microservices</span>
+            <span class="skill-level">Intermediate</span>
+          </div>
+
+          <div class="skill-card" data-category="frameworks">
+            <i class="fa-solid fa-cloud-arrow-up text-2xl text-blue-400 mb-2"></i>
+            <span class="skill-name">RESTful APIs</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <!-- Frontend & Web -->
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-react text-2xl text-sky-400 mb-2"></i>
+            <span class="skill-name">React.js</span>
+            <span class="skill-level">Intermediate</span>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-js text-2xl text-yellow-400 mb-2"></i>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-html5 text-2xl text-orange-500 mb-2"></i>
+            <span class="skill-name">HTML / HTML5</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-css3-alt text-2xl text-blue-500 mb-2"></i>
+            <span class="skill-name">CSS / CSS3</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-solid fa-layer-group text-2xl text-violet-400 mb-2"></i>
+            <span class="skill-name">Full-Stack Dev</span>
+            <span class="skill-level">Practiced</span>
+          </div>
+
+          <!-- Database & Storage -->
+          <div class="skill-card" data-category="database">
+            <i class="fa-solid fa-database text-2xl text-cyan-400 mb-2"></i>
+            <span class="skill-name">MySQL</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="database">
+            <i class="fa-solid fa-table text-2xl text-blue-400 mb-2"></i>
+            <span class="skill-name">SQL</span>
+            <span class="skill-level">HackerRank Certified</span>
+          </div>
+
+          <div class="skill-card" data-category="database">
+            <i class="fa-solid fa-server text-2xl text-teal-400 mb-2"></i>
+            <span class="skill-name">DBMS</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <!-- Engineering Practices -->
+          <div class="skill-card" data-category="engineering">
+            <i class="fa-solid fa-diagram-project text-2xl text-indigo-400 mb-2"></i>
+            <span class="skill-name">Data Structures</span>
+            <span class="skill-level">Udemy Certified</span>
+          </div>
+
+          <div class="skill-card" data-category="engineering">
+            <i class="fa-solid fa-microchip text-2xl text-purple-400 mb-2"></i>
+            <span class="skill-name">Algorithms</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="engineering">
+            <i class="fa-brands fa-git-alt text-2xl text-orange-500 mb-2"></i>
+            <span class="skill-name">Git & Versioning</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-category="engineering">
+            <i class="fa-solid fa-arrows-spin text-2xl text-emerald-400 mb-2"></i>
+            <span class="skill-name">SDLC</span>
+            <span class="skill-level">Proficient</span>
+          </div>
+
+          <div class="skill-card" data-category="engineering">
+            <i class="fa-solid fa-tasks text-2xl text-amber-400 mb-2"></i>
+            <span class="skill-name">Project Management</span>
+            <span class="skill-level">Experienced</span>
+          </div>
+
+          <div class="skill-card" data-category="engineering">
+            <i class="fa-solid fa-chart-line text-2xl text-cyan-400 mb-2"></i>
+            <span class="skill-name">Analytical Skills</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+
+          <!-- Interpersonal & Soft Skills -->
+          <div class="skill-card" data-category="interpersonal">
+            <i class="fa-solid fa-users text-2xl text-indigo-400 mb-2"></i>
+            <span class="skill-name">Team Leadership</span>
+            <span class="skill-level">Demonstrated</span>
+          </div>
+
+          <div class="skill-card" data-category="interpersonal">
+            <i class="fa-solid fa-comments text-2xl text-teal-400 mb-2"></i>
+            <span class="skill-name">Communication</span>
+            <span class="skill-level">Professional</span>
+          </div>
+
+          <div class="skill-card" data-category="interpersonal">
+            <i class="fa-solid fa-chalkboard-user text-2xl text-emerald-400 mb-2"></i>
+            <span class="skill-name">Training & Mentorship</span>
+            <span class="skill-level">Collaborative</span>
+          </div>
+
+          <div class="skill-card" data-category="interpersonal">
+            <i class="fa-solid fa-handshake-angle text-2xl text-purple-400 mb-2"></i>
+            <span class="skill-name">Customer Service</span>
+            <span class="skill-level">Professional</span>
+          </div>
+
+          <div class="skill-card" data-category="interpersonal">
+            <i class="fa-solid fa-file-excel text-2xl text-green-500 mb-2"></i>
+            <span class="skill-name">Microsoft Excel</span>
+            <span class="skill-level">Skilled</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- LICENSES & CERTIFICATIONS (6) -->
+    <section id="certifications" class="py-24 bg-slate-900/40 border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+            Accreditations
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+            Licenses & Certifications
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            Verified credentials in SQL, Core Java, Data Structures, and Communications.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Cert 1: SQL HackerRank -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-bold">
+                  <i class="fa-brands fa-hackerrank text-xl"></i>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">Verified</span>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">SQL (Intermediate)</h4>
+              <p class="text-xs text-indigo-400 font-semibold mb-2">HackerRank</p>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Complex subqueries, joins, query optimizations, aggregations, and schema constraints.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+              <span>ID: <code class="text-slate-300">D927FB4E202F</code></span>
+              <span>Jan 2025 – 2030</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Java HackerRank -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-bold">
+                  <i class="fa-brands fa-hackerrank text-xl"></i>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">Verified</span>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Java (Basic)</h4>
+              <p class="text-xs text-indigo-400 font-semibold mb-2">HackerRank</p>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Core Java OOP concepts, collections framework, exception handling, and data streams.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+              <span>ID: <code class="text-slate-300">E2BC91DD2E18</code></span>
+              <span>Jan 2025 – 2030</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: DSA Udemy -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-graduation-cap text-lg"></i>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400">Course</span>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Data Structures & Algorithms</h4>
+              <p class="text-xs text-indigo-400 font-semibold mb-2">Udemy</p>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Algorithmic problem solving, Big-O analysis, trees, graphs, sorting, and dynamic programming.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+              <span>ID: <code class="text-slate-300">UC-1f9edf26...</code></span>
+              <span>Jul 2023 – 2034</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: Indian Railways -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-train-subway text-lg"></i>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400">Government</span>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Networks & Surveillance System</h4>
+              <p class="text-xs text-indigo-400 font-semibold mb-2">Indian Railways</p>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Enterprise telecommunications, IP networking, automated monitoring, and surveillance architectures.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+              <span>ID: <code class="text-slate-300">206/2023/3675...</code></span>
+              <span>Jun 2023 – 2030</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: Oasis Infobyte Java Intern -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-briefcase text-lg"></i>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400">Internship</span>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Java Development Internship</h4>
+              <p class="text-xs text-indigo-400 font-semibold mb-2">Oasis Infobyte</p>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Hands-on project work in enterprise Java programming, modular application structure, and backend services.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+              <span>ID: <code class="text-slate-300">OIB/M1/IP578</code></span>
+              <span>Apr 2023 – 2033</span>
+            </div>
+          </div>
+
+          <!-- Cert 6: Great Learning C++ -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-certificate text-lg"></i>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400">Foundation</span>
+              </div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">C++ Programming</h4>
+              <p class="text-xs text-indigo-400 font-semibold mb-2">Great Learning</p>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Memory management, pointers, object-oriented concepts, and computational fundamentals.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+              <span>Issued: <code class="text-slate-300">Jan 2022</code></span>
+              <span>Lifetime</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-24 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+            Academic Background
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+            Education & Foundation
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            Solid computer science training and technical fundamentals.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- UIT RGPV -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-indigo-500/30 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-xl">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-600/15 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-2xl shrink-0">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <h3 class="font-display font-bold text-xl text-white">University Institute of Technology, RGPV</h3>
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-mono text-xs font-semibold">
+                    8.16 CGPA
+                  </span>
+                </div>
+                <p class="text-indigo-400 font-medium text-sm mt-0.5">
+                  Bachelor of Technology (B.Tech) in Computer Science & Engineering
+                </p>
+                <p class="text-slate-400 text-xs mt-1">
+                  Bhopal, Madhya Pradesh, India
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tech-chip text-xs">Data Structures & Algorithms</span>
+                  <span class="tech-chip text-xs">Spring Boot</span>
+                  <span class="tech-chip text-xs">SDLC</span>
+                  <span class="tech-chip text-xs">Database Systems</span>
+                  <span class="tech-chip text-xs">Team Leadership</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-left sm:text-right shrink-0">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 font-mono text-xs">
+                Oct 2020 – Jun 2024
+              </span>
+              <p class="text-xs text-slate-500 mt-2 font-mono">4-Year Degree</p>
+            </div>
+          </div>
+
+          <!-- Kendriya Vidyalaya -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-[#0f172a] border border-white/10 hover:border-cyan-500/30 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-xl">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-cyan-600/15 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-2xl shrink-0">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <h3 class="font-display font-bold text-xl text-white">Kendriya Vidyalaya (KV)</h3>
+                  <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-400 font-mono text-xs font-semibold">
+                    79%
+                  </span>
+                </div>
+                <p class="text-cyan-400 font-medium text-sm mt-0.5">
+                  Primary, Secondary & Higher Secondary Education
+                </p>
+                <p class="text-slate-400 text-xs mt-1">
+                  Science, Mathematics & Computer Fundamentals
+                </p>
+              </div>
+            </div>
+            <div class="text-left sm:text-right shrink-0">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 font-mono text-xs">
+                Apr 2008 – Mar 2020
+              </span>
+              <p class="text-xs text-slate-500 mt-2 font-mono">Schooling (12 Years)</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT & CONNECT SECTION -->
+    <section id="contact" class="py-24 bg-slate-900/40 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left: Direct Contact Information -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+                Let's Connect
+              </div>
+              <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+                Let's Build Something High-Impact Together
+              </h2>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Whether you're looking for a Java Backend Engineer for your team, have an exciting distributed systems role, or want to collaborate on open tech, feel free to reach out directly.
+              </p>
+
+              <!-- Contact Cards List -->
+              <div class="space-y-4">
+                
+                <!-- Email Card -->
+                <div class="p-4 rounded-xl bg-[#0f172a] border border-white/10 flex items-center justify-between gap-4 group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center text-lg">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                      <span class="text-xs font-mono text-slate-400 block">Email Address</span>
+                      <a href="mailto:dharamveersingh1715@gmail.com" class="text-sm font-semibold text-white group-hover:text-indigo-400 transition-colors">
+                        dharamveersingh1715@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <button 
+                    onclick="copyToClipboard('dharamveersingh1715@gmail.com', 'Email Address')"
+                    title="Copy Email"
+                    class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="p-4 rounded-xl bg-[#0f172a] border border-white/10 flex items-center justify-between gap-4 group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                      <span class="text-xs font-mono text-slate-400 block">Mobile Phone</span>
+                      <a href="tel:+919001177119" class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                        +91 9001177119
+                      </a>
+                    </div>
+                  </div>
+                  <button 
+                    onclick="copyToClipboard('+919001177119', 'Phone Number')"
+                    title="Copy Phone"
+                    class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+
+                <!-- LinkedIn Card -->
+                <div class="p-4 rounded-xl bg-[#0f172a] border border-white/10 flex items-center justify-between gap-4 group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-[#0077B5]/20 text-[#0077B5] flex items-center justify-center text-lg">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div>
+                      <span class="text-xs font-mono text-slate-400 block">LinkedIn Profile</span>
+                      <a href="https://www.linkedin.com/in/dharamveersinghhere/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white group-hover:text-[#0077B5] transition-colors">
+                        linkedin.com/in/dharamveersinghhere
+                      </a>
+                    </div>
+                  </div>
+                  <a href="https://www.linkedin.com/in/dharamveersinghhere/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                  </a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="p-4 rounded-xl bg-[#0f172a] border border-white/10 flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono text-slate-400 block">Locations</span>
+                    <span class="text-sm font-semibold text-white">Bengaluru, Karnataka (On-site / Hybrid) · Shivpuri, MP</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Profile Badge snippet -->
+            <div class="mt-8 p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <img 
+                src="https://media.licdn.com/dms/image/v2/D4D03AQF-gAioYN_0aw/profile-displayphoto-scale_100_100/B4DZ_mIqIIHQAY-/0/1786272458391?e=1790812800&v=beta&t=1_GyCWL4OXdYIp_rUrWRxXKA2mhZ8o5KGSIN5yd78Qg" 
+                alt="Dharamveer Singh"
+                onerror="this.src='https://ui-avatars.com/api/?name=Dharamveer+Singh&background=6366f1&color=fff&size=100'"
+                class="w-12 h-12 rounded-xl object-cover" 
+              />
+              <div class="text-xs">
+                <span class="font-bold text-white block">Dharamveer Singh</span>
+                <span class="text-slate-400 font-mono">Open to Software Engineer / Backend roles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="lg:col-span-7">
+            <div class="p-8 sm:p-10 rounded-3xl bg-[#0f172a] border border-white/10 shadow-2xl relative">
+              <h3 class="font-display font-bold text-2xl text-white mb-2">Send a Message</h3>
+              <p class="text-slate-400 text-sm mb-6">
+                Drop your details below to start a conversation or request a resume callback.
+              </p>
+
+              <form id="contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-xs font-mono font-medium text-slate-300 mb-1.5">Your Name *</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      required 
+                      placeholder="e.g. Satya Nadella" 
+                      class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-xs font-mono font-medium text-slate-300 mb-1.5">Your Email *</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      required 
+                      placeholder="you@company.com" 
+                      class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-xs font-mono font-medium text-slate-300 mb-1.5">Subject</label>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    placeholder="e.g. Software Engineer Opportunity / Tech Collaboration" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-mono font-medium text-slate-300 mb-1.5">Message *</label>
+                  <textarea 
+                    id="message" 
+                    rows="4" 
+                    required 
+                    placeholder="Tell me about the role, technical challenge, or project..." 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit" 
+                  id="submit-btn"
+                  class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-medium text-sm shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] transition-all">
+                  <span>Send Direct Message</span>
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+              </form>
+
+              <!-- Success Alert Box (Hidden Initially) -->
+              <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-lg"></i>
+                <div>
+                  <span class="font-bold">Message sent!</span>
+                  <p class="text-xs text-emerald-300/80">Thank you for reaching out. Dharamveer will reply to your email shortly.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-white/5 bg-[#070a12] text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-display font-bold text-sm">
+          DS
+        </div>
+        <p class="text-xs text-slate-500">
+          © 2026 Dharamveer Singh. Engineered with Java, Spring Boot & Modern Web standards.
+        </p>
+      </div>
+
+      <!-- Footer Social Links -->
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/dharamveersinghhere/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:dharamveersingh1715@gmail.com" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="tel:+919001177119" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Phone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="#hero" class="w-9 h-9 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 flex items-center justify-center transition-colors ml-2" title="Back to top">
+          <i class="fa-solid fa-arrow-up text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- PROJECT ARCHITECTURE MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0f172a] border border-white/10 p-6 sm:p-8 shadow-2xl transform scale-95 transition-transform duration-300" id="modal-container">
+      
+      <button 
+        onclick="closeProjectModal()"
+        class="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div id="modal-content">
+        <!-- Dynamically populated via script.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
